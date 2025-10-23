@@ -135,7 +135,73 @@ input[type="checkbox"] {
   appearance: none;
   outline: none;
   position: relative;
+  transition: all 0.3s;
 }
 input[type="checkbox"]:checked {
   background-color: var(--primary-color);
+}
+input[type="checkbox"]:checked::after {
+  content: "\2714";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+}
+#length-value {
+  font-weight: 600;
+  color: var(--primary-color);
+  width: 30px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  padding: 2px;
+  text-align: center;
+}
+button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  border-radius: 10px;
+  font-weight: 600px;
+  color: white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(43, 88, 118, 0.2);
+  transition: all 0.3s;
+}
+button:hover {
+  transform: translateY(-2px);
+}
+button:active {
+  transform: translateY(0px);
+}
+.strength-container {
+  margin-top: 0.8rem;
+}
+.strength-container p {
+  font-size: 0.9rem;
+  margin-top: 2px;
+  font-weight: 500;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+#strength-label {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.strength-meter {
+  height: 10px;
+  margin-top: 0.2rem;
+  background-color: #bbc0c5;
+  border-radius: 10px;
+  margin-top: 5rem;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
